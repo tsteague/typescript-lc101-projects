@@ -19,18 +19,10 @@ let daysToMars: number = hoursToMars / 24;
 console.log( `${spacecraftName} will reach Mars in ${daysToMars} days.` );
 
 // Part 3: Create a Function ("getDaysToLocation")
-function getDaysToLocation( kilometersAway: number ): number
-{
-  let hoursToLocation: number = (kilometersAway * milesPerKilometer) / speedMph;
-
-  return hoursToLocation / 24;
-}
 
 // Move your output statement from part 2 here. Update the template literal to call
-console.log( `${spacecraftName} will reach this location in ${getDaysToLocation(kilometersToMars)} days.` );
 
 // the function and print the outputs for a Mars trip and a moon trip.
-console.log( `${spacecraftName} will reach the moon in ${getDaysToLocation(kilometersToTheMoon)} days.` );
 
 // Part 4: Create a Spacecraft Class
 class Spacecraft
@@ -71,7 +63,7 @@ console.log( `${spaceShuttle.name} will reach the moon in ${spaceShuttle.getDays
 
 
 // Add the printDaysToLocation function to the Spacecraft class.
-spaceShuttle.printDaysToLocation(new SpaceLocation('Mars', kilometersToMars));
-spaceShuttle.printDaysToLocation(new SpaceLocation('the Moon', kilometersToTheMoon));
 
 // Paste in the code from step 6 here:
+spaceShuttle.printDaysToLocation(new SpaceLocation('Mars', kilometersToMars));
+spaceShuttle.printDaysToLocation(new SpaceLocation('the Moon', kilometersToTheMoon));
