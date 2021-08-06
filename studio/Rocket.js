@@ -18,12 +18,8 @@ var Rocket = /** @class */ (function () {
     };
     Rocket.prototype.currentMassKg = function () {
         var totalMass = 0;
-        this.astronauts.forEach(function (astronaut) {
-            totalMass += astronaut.massKg;
-        });
-        this.cargoItems.forEach(function (cargoItem) {
-            totalMass += cargoItem.massKg;
-        });
+        totalMass += this.sumMass(this.astronauts);
+        totalMass += this.sumMass(this.cargoItems);
         return totalMass;
     };
     Rocket.prototype.canAdd = function (item) {
